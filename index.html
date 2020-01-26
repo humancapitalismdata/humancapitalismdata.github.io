@@ -3,8 +3,17 @@ layout: default
 title:  'Human Capitalism Data'
 ---
 
+<blockquote class="blockquote">
+  <p class="mb-0">Humanity is more important than money.</p>
+  <footer class="blockquote-footer">Andrew Yang <cite title="Source Title">The War on Normal People</cite></footer>
+</blockquote>
 
 
-
+<h1>Datasets</h1>
+<ul>
+  {% for dataset in site.datasets %}
+  <li><a href="{{ dataset.url }}">{{dataset.dataset_name}}</a></li>
+  {% endfor %}
+</ul>
 
 
