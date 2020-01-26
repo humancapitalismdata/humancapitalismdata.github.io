@@ -7,25 +7,25 @@ Median household income data for the United States is from <a href="https://www.
 {% assign mydata=site.data.median_income %}
 
 
-
-<table  class="table table-striped table-bordered" id="median_income">
-    <caption>Median Income in 2018 Dollars</caption>
-    <thead>
-    {% for column in mydata[0] %}
-        <th>{{ column[0] }}</th>
-    {% endfor %}
-    </thead>
-    <tbody>
-    {% for row in mydata %}
-        <tr>
-        {% for cell in row %}
-            <td>{{ cell[1] }}</td>
+<div class="table-responsive">
+    <table  class="table table-striped table-bordered" id="median_income">
+        <caption>Median Income in 2018 Dollars</caption>
+        <thead>
+        {% for column in mydata[0] %}
+            <th>{{ column[0] }}</th>
         {% endfor %}
-        </tr>
-    {% endfor %}
-    </tbody>
-</table>
-
+        </thead>
+        <tbody>
+        {% for row in mydata %}
+            <tr>
+            {% for cell in row %}
+                <td>{{ cell[1] }}</td>
+            {% endfor %}
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
 
 <script type="text/javascript">
     $(document).ready(function() {
